@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "bx bx-error",
+        "content": "Meeting all staff at 2000hrs"
+    },
+    {
+        "icon": "bx bx-package",
+        "content": "New equipment should be used carefully by everyone"
+    },
+    {
+        "icon": "bx bx-cart",
+        "content": "Attend to patients on time"
+    },
+    {
+        "icon": "bx bx-error",
+        "content": "All nurses and doctors are reminded to sterilze equipment before use"
+    },
+    {
+        "icon": "bx bx-cart",
+        "content": "Todays is Dr.Abbas's birthday"
+    }
+]
