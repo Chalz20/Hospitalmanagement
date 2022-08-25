@@ -20,6 +20,11 @@ import Laboratory from '../../pages/Laboratory'
 import Phamarcy from '../../pages/Phamarcy'
 import Nurse from '../../pages/Nurse'
 import SinglePatient from '../../pages/SinglePatient'
+import Reception from '../../pages/ReceptionDashboard'
+import Nursepreliminary from '../../pages/Nursepreliminary'
+import VitalSign from '../../pages/VitalSign/VitalSign'
+import Account from '../../pages/Account/Account'
+import Outpatient from '../../pages/Outpatient'
 
 
 
@@ -27,8 +32,6 @@ import SinglePatient from '../../pages/SinglePatient'
 
 const Layout = () => {
   return (
-
-  
     <Router>
             <Route render={(props) => (
                 <div className={`layout`}>
@@ -37,12 +40,21 @@ const Layout = () => {
                         <TopNav/>
                         <div className="layout__content-main">
                           <Switch>
-                            {/*Dashboard*/}
+
+                          {/*Accountant*/}
+                          <Route exact path="/accounts" component={()=><Account/>} />
+
+                          {/*Dashboard*/}
                           <Route exact path="/dashboard" component={()=><Dashboard/>} />
                           
                           {/*Patients*/}
                           <Route exact path="/patients"component={()=><Patients/>}/>          
                           <Route path="/patients/new_patient"  component={()=><NewPatient/>}/> 
+
+                         {/*Reception*/}
+                          <Route exact path="/receptiondashboard" component={()=><Reception/>}/>
+                          <Route path="/patients/new_patient"  component={()=><NewPatient/>}/>
+                          <Route path="/receptiondashboard/visit"  component={()=><Outpatient/>}/> 
                           
                           {/*Emergency*/}
                           <Route path="/emergency" component={()=><Emergency/>}/>
@@ -60,18 +72,18 @@ const Layout = () => {
                           <Route path="/phamarcy" component={()=><Phamarcy/>}/>
                           
                           {/*Nurse*/}
-                          <Route path="/nurse" component={()=><Nurse/>}/>
-                          
+                          <Route exact path="/nurse" component={()=><Nurse/>}/>
+                          <Route  exact path="/nurse/preliminary" component={()=><Nursepreliminary/>}/>
+                          <Route  path="/nurse/preliminary/vitals" component={()=><VitalSign/>}/>
+
                 
                          
                           </Switch>
-                       
-                      
                         </div>
                     </div>
                 </div>
             )}/>
-        </Router>
+    </Router>
   )
 }
 

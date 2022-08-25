@@ -33,7 +33,7 @@ const Nurse =() =>{
 
                     <div className="row mt-3">
                         <div className="col-lg-6">
-                          <Link to="/doctor/outpatients" className='text-decoration-none link-dark'> 
+                          <Link to="/nurse/preliminary" className='text-decoration-none link-dark'> 
                             <StatusCard icon="bx bxs-thermometer" count="Preliminary tests" title="Record test on outpatient"/>
                           </Link>
                         </div>

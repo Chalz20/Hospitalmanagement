@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import { useParams } from "react-router";
 import {FaUserCheck,FaSearch} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
-import './account.css'
+//import './account.css'
 
 const Nursepreliminary = () => {
   return (
@@ -94,7 +94,7 @@ const Nursepreliminary = () => {
             <td></td>
             <td></td>
            
-            <td><Link to='/vitalsign' className='text-decoration-none link-dark'>Acknowledge</Link></td>
+            <td><Link to='/nurse/preliminary/vitals' className='text-decoration-none link-dark'>Acknowledge</Link></td>
           
             
    

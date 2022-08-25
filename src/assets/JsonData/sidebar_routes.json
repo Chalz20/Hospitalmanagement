@@ -10,6 +10,11 @@
         "icon": "bx bx-user-pin"
     },
     {
+        "display_name": "Reception",
+        "route": "/receptiondashboard",
+        "icon": "bx bxs-id-card"
+    },
+    {
         "display_name": "Emergency",
         "route": "/emergency",
         "icon": "bx bxs-ambulance"
@@ -29,6 +34,12 @@
         "display_name": "Phamarcy",
         "route": "/phamarcy",
         "icon": "bx bx-plus-medical"
+        
+    },
+    {
+        "display_name": "Accountant",
+        "route": "/accounts",
+        "icon": "bx bx-handicap"
         
     },
     {
