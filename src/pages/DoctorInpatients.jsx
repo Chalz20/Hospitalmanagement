@@ -1,4 +1,6 @@
 import React from "react";
+import { GridComponent, ColumnsDirective, ColumnDirective, Filter, Inject, VirtualScroll, Sort } from '@syncfusion/ej2-react-grids';
+import data from "../dummy.json"
 
 const DoctorInpatients =()=>{
     return(
@@ -12,10 +14,22 @@ const DoctorInpatients =()=>{
                  
                 
                  {/*Table for patients*/}
-                  <div>
-                     <p>List of available patients</p>
-                  </div>
-                  
+                 <GridComponent dataSource={data}>
+                     <ColumnsDirective>
+                          <ColumnDirective field='Patient ID' headerText='PID' width={80} />
+                          <ColumnDirective field='First Name' headerText='First name' textAlign="Left" />
+                          <ColumnDirective field='Middle Name' headerText='MiddleName'  />
+                          <ColumnDirective field='Last Name' headerText='Last Name'  />
+                          <ColumnDirective field='Gender' headerText='Sex'  />
+                          <ColumnDirective field='Age' headerText='Age' width={80} />
+                          <ColumnDirective field='Sponsor' headerText='Sponsor' />
+                          <ColumnDirective field='Residence' headerText='Residence'  />
+                          <ColumnDirective field='Street' headerText='Street' />
+                          <ColumnDirective field='Date Registered' headerText='Registered'  />
+                          <ColumnDirective field='Phone' headerText='Phone' />
+                       </ColumnsDirective>
+                 </GridComponent>
+                
                    
                </div>
             </div>

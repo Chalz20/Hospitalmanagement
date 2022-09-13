@@ -1,6 +1,7 @@
 import React from "react";
 import StatusCard from "../components/status-card/StatusCard";
 import { Link } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
 
 const DoctorsWork =()=>{
   {/* 
@@ -10,11 +11,12 @@ const DoctorsWork =()=>{
     title:"Outpatient list"
    }
    */}
-
+const { data } = useFetch("https://192.168.172.33:5002/Drug/GetDrugs")
     return(
         <div>
             <h3>Doctors works</h3>
-            
+            {data.map((item,index)=>(<h6 key={index}>{item.name}</h6>)  
+            )}
             <div className="container">
                 <div className="row mt-3">
                    

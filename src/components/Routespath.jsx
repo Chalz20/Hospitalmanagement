@@ -8,12 +8,7 @@ import Patients from '../pages/Patients'
 const Routespath = ()=> {
     return (
         <Switch>
-            <Route exact path='/dashboard'>
-              <Dashboard/>
-            </Route>
-            <Route path='/patients'>
-              <Patients/>
-            </Route>
+            
 
         </Switch>
     )

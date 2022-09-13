@@ -1,0 +1,24 @@
+
+.newpatient__search {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.newpatient__search > input {
+    height: 100%;
+    width: 100%;
+    padding: 10px 60px 10px 20px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+   
+   
+}
+
+.newpatient__search > i {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+}

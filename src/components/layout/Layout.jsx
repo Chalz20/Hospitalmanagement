@@ -25,23 +25,54 @@ import Nursepreliminary from '../../pages/Nursepreliminary'
 import VitalSign from '../../pages/VitalSign/VitalSign'
 import Account from '../../pages/Account/Account'
 import Outpatient from '../../pages/Outpatient'
+import Moniter from '../../pages/Moniter'
+import Admin from '../../pages/Admin'
+import DoctorPanel from '../../components/admin/DoctorPanel'
+import Login from '../../pages/Login/Login'
+import WardPanel from '../admin/ward/WardPanel'
+import PharmacistPanel from '../admin/pharmacist/PharmacistPanel'
+import NursePanel from '../admin/nurse/NursePanel'
+import DepartmentPanel from '../admin/department/DepartmentPanel'
+//import useFetch from '../../hooks/useFetch'
 
 
+//const URL= "https://192.168.185.33:5002/Drug/GetDrugs"
 
 
 
 const Layout = () => {
+
+
+
   return (
     <Router>
+      <Switch>
+
+      
+        <Route exact path={"/login"} 
+            render={props=>(
+              <Login {...props} loggedInStatus ={props.loggedInStatus}/>
+            )}
+            />
             <Route render={(props) => (
                 <div className={`layout`}>
                     <Sidebar {...props}/>
                     <div className="layout__content">
                         <TopNav/>
                         <div className="layout__content-main">
-                          <Switch>
+                          
 
-                          {/*Accountant*/}
+                          {/*Admin*/}
+                         <Route exact path="/admin" component={()=><Admin/>} /> 
+                         <Route exact path="/admin/doctorpanel" component={()=><DoctorPanel/>} />
+                         <Route exact path ="/admin/wardpanel" component={()=><WardPanel/>}/>
+                         <Route exact path ="/admin/pharmacistpanel" component={()=><PharmacistPanel/>}/>
+                         <Route exact path ="/admin/nursepanel" component={()=><NursePanel/>}/>
+                         <Route exact path ="/admin/departmentpanel" component={()=><DepartmentPanel/>}/>
+                        
+                          
+
+                          {/*Billing*/}
                           <Route exact path="/accounts" component={()=><Account/>} />
 
                           {/*Dashboard*/}
@@ -52,9 +83,9 @@ const Layout = () => {
                           <Route path="/patients/new_patient"  component={()=><NewPatient/>}/> 
 
                          {/*Reception*/}
-                          <Route exact path="/receptiondashboard" component={()=><Reception/>}/>
-                          <Route path="/patients/new_patient"  component={()=><NewPatient/>}/>
-                          <Route path="/receptiondashboard/visit"  component={()=><Outpatient/>}/> 
+                          <Route exact path="/reception" component={()=><Reception/>}/>
+                          <Route path="/reception/new_patient"  component={()=><NewPatient/>}/>
+                          <Route path="/reception/visit"  component={()=><Outpatient/>}/> 
                           
                           {/*Emergency*/}
                           <Route path="/emergency" component={()=><Emergency/>}/>
@@ -73,16 +104,20 @@ const Layout = () => {
                           
                           {/*Nurse*/}
                           <Route exact path="/nurse" component={()=><Nurse/>}/>
-                          <Route  exact path="/nurse/preliminary" component={()=><Nursepreliminary/>}/>
-                          <Route  path="/nurse/preliminary/vitals" component={()=><VitalSign/>}/>
+                          <Route exact path="/nurse/preliminary" component={()=><Nursepreliminary/>}/>
+                          <Route exact path="/nurse/preliminary/vitals" component={()=><VitalSign/>}/>
+                          <Route exact path="/nurse/moniter" component={()=><DoctorInpatients/>}/>
+                          <Route  path="/nurse/moniter/:patientID" component={()=><Moniter/>}/>
+
 
                 
                          
-                          </Switch>
+                          
                         </div>
                     </div>
                 </div>
             )}/>
+            </Switch>
     </Router>
   )
 }
