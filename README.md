@@ -1,3 +1,6 @@
+# Hospital Management system Frontend 
+This is a dynamic, user-friendly interface designed to streamline and enhance the administration and operation of hospital services. It enables seamless patient registration, appointment scheduling, medical record management, billing, and reporting. The system features intuitive navigation and real-time updates, ensuring that healthcare providers can efficiently manage patient information, track treatment progress, and optimize resource allocation. Integrated with backend services, the React frontend ensures a responsive, efficient, and secure platform for both healthcare professionals and patients, ultimately improving the overall healthcare delivery experience.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
